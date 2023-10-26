@@ -1,38 +1,46 @@
 Algoritmo Calculadoradelasalvacion
-	Definir Numero1, Numero2 Como Real 
-	Definir opcionn, result Como Real
-	Escribir "Ingrese el primer numero: "  
-	Leer Numero1
+	Definir Num1, Num2 Como Real
+	Definir Eleccion Como Entero
+	Escribir "Ingrese el primer numero: "
+	Leer Num1
 	Escribir "Ingrese el segundo numero: "
-	Leer Numero2
+	Leer Num2
 	Escribir "Que operacion desea realizar?"
-	Escribir " Opcion 1: Suma"
-	Escribir " Opcion 2: Resta"
-	Escribir " Opcion 3: Multiplicacion"
-	Escribir " Opcion 4: Division"
-	Escribir " Opcion 5: Potenciacion"
-	Escribir " Opcion 6: Radicacion"
-	Leer opcionn
-	Si opcionn = 1 Entonces
-		result = (Numero1 + Numero2)
-	SiNo 
-		Si opcionn = 2 Entonces 
-			result = (Numero1 - Numero2)
+	Escribir "[1] Suma"
+	Escribir "[2] Resta"
+	Escribir "[3] Multiplicacion"
+	Escribir "[4] Division"
+	Escribir "[5] Potenciación"
+	Escribir "[6] Raiz"
+	Leer Eleccion
+	Definir Sm, Rst, Mlt, Dvs, Ptn, Rz1, Rz2 Como Real
+	Sm = Num1 + Num2
+	Rst = Num1 - Num2
+	Mlt = Num1 *Num2
+	Dvs = Num1 / Num2
+	Ptn = Num1 ^ Num2
+	Rz1 = raiz(Num1)
+	Rz2 = raiz(Num2)
+	Si (Eleccion = 1) Entonces
+		Escribir "La suma de dichos numeros es: " Sm
+	Sino 
+		Si (Eleccion = 2) Entonces
+			Escribir "La resta de dichos numeros es: " Rst
 		SiNo
-			Si opcionn = 3 Entonces
-				result = (Numero1 * Numero2)
-			SiNo 
-				Si opcionn = 4 Y Num2 <> 0 Entonces
-					result = (Numero1 / Numero2)
+			Si (Eleccion = 3) Entonces
+				Escribir "La multiplicacion de dichos numeros es: " Mlt
+			SiNo
+				Si (Eleccion = 4) Entonces
+					Escribir " La division de dichos numeros es: " Dvs
 				SiNo
-					Si opcionn = 5 Entonces
-						result = Numero1^(1/Numero2)
+					Si (Eleccion = 5) Entonces
+						Escribir " La potencia de dichos numeros es: " Ptn
 					SiNo
-						result = (Numero1 ^ Numero2)
+						Escribir " La Raiz del primer numero es: " Rz1
+						Escribir " La Raiz del segundo numero es: " Rz2
 					FinSi
 				FinSi
 			FinSi
 		FinSi
 	FinSi
-	Escribir "La respuest es: " result
 FinAlgoritmo
